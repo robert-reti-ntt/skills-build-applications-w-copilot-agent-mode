@@ -32,3 +32,13 @@ class Workout(models.Model):
     reps = models.IntegerField()
     def __str__(self):
         return f"{self.user_email} - {self.workout}"
+
+
+# Coach model for managing coaches
+class Coach(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    team = models.CharField(max_length=50, blank=True)
+    specialty = models.CharField(max_length=100, blank=True)
+    def __str__(self):
+        return self.name

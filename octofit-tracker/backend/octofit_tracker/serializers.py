@@ -1,5 +1,9 @@
 from rest_framework import serializers
-from .models import User, Team, Activity, Leaderboard, Workout
+from .models import User, Team, Activity, Leaderboard, Workout, Coach
+class CoachSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Coach
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
