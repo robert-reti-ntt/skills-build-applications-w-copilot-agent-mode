@@ -1,9 +1,6 @@
 from rest_framework import viewsets
-from .models import User, Team, Activity, Leaderboard, Workout, Coach
-from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer, CoachSerializer
-class CoachViewSet(viewsets.ModelViewSet):
-    queryset = Coach.objects.all()
-    serializer_class = CoachSerializer
+from .models import User, Team, Activity, Leaderboard, Workout
+from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
